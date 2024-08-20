@@ -12,16 +12,16 @@ Route::get('/posts/create', [postController::class, 'create']);
 Route::get('/posts/{id}', [postController::class, 'show']);
 
 Route::get('prueba', function () {
-    // $post = new Post();
-    // $post->title = 'Prueba 3';
-    // $post->content = 'Esto es una prueba 3';
-    // $post->save();
-    // return $post;
+    $post = new Post();
+    $post->title = 'PRUEBA 5';
+    $post->content = 'Esto es una prueba 4';
+    $post->save();
+    return $post;
 
-    $postToDelete = Post::find(1);
-    $postToDelete->delete();
+    // $postToDelete = Post::find(1);
+    // $postToDelete->delete();
 
-    $restPosts = Post::all();
+    // $restPosts = Post::all();
 
-    return $restPosts;
+    // return $restPosts;
 });
