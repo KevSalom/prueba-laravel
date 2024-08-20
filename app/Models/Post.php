@@ -10,6 +10,13 @@ class Post extends Model
 {
     use HasFactory;
 
+    protected function casts():array
+    {
+        return [
+            'isPro' => 'boolean',
+        ];
+    }
+
     protected function title():Attribute
     {
         return Attribute::make(
